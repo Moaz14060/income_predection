@@ -123,19 +123,19 @@ def preprocess(value: dict, _one_hot: OneHotEncoder, _min_max_scaler: MinMaxScal
     return final_value
 
 # Load Encoders
-with open("F:/income_prediction/encoders/one_hot.pkl", "rb") as f:
+with open("encoders/one_hot.pkl", "rb") as f:
     one_hot = pickle.load(f)
 
-with open("F:/income_prediction/encoders/scaler.pkl", "rb") as f:
+with open("encoders/scaler.pkl", "rb") as f:
     min_max_scaler = pickle.load(f)
 
-with open("F:/income_prediction/encoders/ordinal.pkl", "rb") as f:
+with open("encoders/ordinal.pkl", "rb") as f:
     ordinal_encoder = pickle.load(f)
 
 value_to_pred = preprocess(value, one_hot, min_max_scaler, ordinal_encoder)
 
 # Load KNN Model
-with open("F:/income_prediction/models/knn_model.sav", "rb") as f:
+with open("models/knn_model.sav", "rb") as f:
     knn_model = pickle.load(f)
 
 # A method to center the button
@@ -144,4 +144,5 @@ with col3:
     pred = st.button("Predict", type= "primary", icon = ":material/online_prediction:")
 if pred:
     st.success(f"Yearly Income: **{knn_model.predict(value_to_pred)[0]}**")
+
     
