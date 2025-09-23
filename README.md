@@ -12,6 +12,11 @@
 - **utils.py:** a helper python file for visualzations, outlier detection and missing values display.
 - **requirements.txt:** a file to get the nessecery **liberaries** into the streamlit app.
 # How to Run:
-- First Method: you can go here to see the app right away https://incomepredection-yyl96edv23abvryefsappbv.streamlit.app/
-- Second Method: download the repository and type
-     `streamlit run your location/model_preds.py` 
+- **First Method:** you can go here to see the app right away https://incomepredection-yyl96edv23abvryefsappbv.streamlit.app/
+- **Second Method:** download the repository and type
+```bash
+# Install dependencies
+pip install -r requirements.txt  
+
+# Run the app (replace with your path (your directory/model_preds.py) if not in the same directory)
+streamlit run model_preds.py
