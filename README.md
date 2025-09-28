@@ -1,5 +1,5 @@
 # About:
-- Creating a machine learning model **KNN** to predect a person's yearly income wheather it's **lower/equal to 50K or higher**.
+- Creating a machine learning model **KNN** to predict a person's yearly income whether it's **lower/equal to 50K or higher**.
 # Steps:
 - Preprocessing **adult.csv** by cleaning Na values, encoding categorical values and scaling numerical values.
 - Performing **EDA** on the data to gain insights.
